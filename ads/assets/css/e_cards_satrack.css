@@ -1,0 +1,319 @@
+.single-ecard-satrack {
+    background-color: white;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.single-ecard-satrack .contenedor-content {
+    min-height: 100%;
+    padding: 0;
+}
+
+.single-ecard-satrack * {
+    box-sizing: content-box;
+}
+
+
+.single-ecard-satrack .card {
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    padding: 0;
+    margin: 0;
+}
+
+.single-ecard-satrack .card-header {
+    background-color: white;
+    background-image: url("../img/ecards-head.jpg");
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+
+.single-ecard-satrack .card-body {
+    background-color: white;
+    background-image: url("../img/ecards-body.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    padding: 0 20px 20px;
+    border: none;
+}
+
+.single-ecard-satrack .caja_imagen_col {
+    position: relative;
+    margin-top: 25px;
+    padding: 10px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-ecard-satrack .caja_imagen_col .imagen_col {
+    border: 3px solid rgb(87, 250, 243);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    width: 230px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    position: relative;
+    z-index: 10;
+}
+
+.single-ecard-satrack .caja_imagen_col .imagen_col img {
+    width: 110%;
+    display: block;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.single-ecard-satrack .loader {
+    position: absolute;
+    padding: 0;
+    left: calc(50% - 125px);
+    top: calc(50% - 125px);
+    width: 250px;
+    height: 250px;
+    border: 3px dotted rgba(87, 250, 243, .7);
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+    animation: rotation 12s linear infinite;
+    z-index: 9;
+}
+
+.single-ecard-satrack .loader::after,
+.single-ecard-satrack .loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgb(87, 250, 243);
+    position: absolute;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px);
+    animation: animloader 4s linear infinite;
+}
+
+.single-ecard-satrack .loader::after {
+    animation-delay: 2s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animloader {
+    0% {
+        transform: scale(.95);
+        opacity: .8;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.single-ecard-satrack .card-title h1 {
+    color: var(--e-global-color-primary);
+    font-weight: 700;
+    font-size: 2rem;
+    border-bottom: 1px solid #dedede;
+    line-height: 1em;
+}
+
+.single-ecard-satrack .card-title h2 {
+    color: var(--e-global-color-secondary);
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1em;
+}
+
+.single-ecard-satrack .icono {
+    background: var(--e-global-color-primary);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+.single-ecard-satrack .item-datos:hover .icono {
+    background: var(--e-global-color-accent);
+    color: white;
+    transition: all 500ms;
+}
+
+.single-ecard-satrack .item-datos {
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    padding: 2px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.single-ecard-satrack .item-datos:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.single-ecard-satrack .item-datos a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.single-ecard-satrack .item-datos:hover a {
+    color: var(--e-global-color-primary);
+}
+
+.single-ecard-satrack .card-qr .aviso {
+    background-color: var(--e-global-color-accent);
+    color: black;
+    text-align: center;
+    line-height: 1.1em;
+    padding: 10px 20px;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 6px;
+    font-size: .8rem;
+    font-weight: 500;
+    animation-name: aniaviso;
+    animation-fill-mode: both;
+    animation-duration: 800ms;
+    ani animation-iteration-count: 1;
+    animation-delay: 3s;
+}
+
+.single-ecard-satrack .card-qr .aviso:after {
+    content: "";
+    position: absolute;
+    border-left: 14px solid var(--e-global-color-accent);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: -14px;
+    top: calc(50% - 10px);
+}
+
+.single-ecard-satrack .card-qr .fas,
+.single-ecard-satrack .card-qr .far {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+.single-ecard-satrack .card-qr img {
+    display: block;
+    width: 180px;
+    animation-fill-mode: both;
+    animation-duration: 800ms;
+    animation-delay: 2.5s;
+    animation-name: aniqr;
+    animation-iteration-count: 1;
+}
+
+.single-ecard-satrack .card-footer {
+    border: none;
+    background: rgb(9, 9, 121);
+    background: linear-gradient(0deg, rgba(9, 9, 121, 1) 23%, rgba(3, 73, 193, 1) 100%);
+}
+
+.single-ecard-satrack .card-footer .icono2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: var(--e-global-color-accent);
+    background-color: rgba(0, 0, 0, .1);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.single-ecard-satrack .card-footer a {
+    text-decoration: none;
+}
+
+.single-ecard-satrack .card-footer a:hover .icono2 {
+    background-color: rgba(0, 0, 0, .2);
+    color: white;
+}
+
+.single-ecard-satrack .card-footer .logo_satrack {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.single-ecard-satrack .card-footer .logo_satrack img {
+    width: 100%;
+}
+
+@keyframes aniaviso {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes aniqr {
+    from {
+        transform: translateX(-80px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .single-ecard-satrack .caja_imagen_col .imagen_col {
+        width: 170px;
+    }
+
+    .single-ecard-satrack .loader {
+        width: 190px;
+        height: 190px;
+        left: calc(50% - 95px);
+        top: calc(50% - 95px);
+    }
+
+    .single-ecard-satrack .loader::after,
+    .single-ecard-satrack .loader::before {
+        width: 180px;
+        height: 180px;
+        left: calc(50% - 90px);
+        top: calc(50% - 90px);
+    }
+}

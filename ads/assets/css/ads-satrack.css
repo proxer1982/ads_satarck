@@ -1,0 +1,40 @@
+.caja-anuncios_satrack {
+    width: 100%;
+    display: flex;
+}
+
+.caja-anuncios_satrack img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+@media (min-width:768px){
+    .caja-anuncios_satrack {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .caja-anuncios_satrack .imagen-mobile {
+        display: none;
+    }
+
+    .caja-anuncios_satrack .imagen-desktop {
+        display: block;
+    }
+}
+
+@media (max-width:767px){
+    .caja-anuncios_satrack {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .caja-anuncios_satrack .imagen-mobile {
+        display: block;
+    }
+
+    .caja-anuncios_satrack .imagen-desktop {
+        display: none;
+    }
+}

@@ -1,0 +1,43 @@
+#caja-post-search {
+    position: relative;
+}
+
+#caja-post-search #resultados-search {
+ position: absolute;
+ left: 0;
+ top: 40px;
+ z-index: 100;
+ width: 100%;
+ border-radius: 8px;
+ box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+
+#caja-post-search .item-search {
+    padding: 8px 15px;
+    width: 100%;
+    font-size: 16px;
+    border-bottom:1px solid #ededed;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    color:#a2a2a2;
+}
+
+#caja-post-search .item-search:hover .texto {
+    color:#2875c7;
+}
+
+#caja-post-search .item-search .type-post {
+    background-color: #ededed;
+    padding: 4px 15px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#custom-fields-metabox2 #field_id_anuncio_satrack {
+    width: 100%;
+}
+
+#custom-fields-metabox2 .postbox {
+    min-width: 0;
+}
